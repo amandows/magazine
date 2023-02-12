@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 140px 1fr;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+.grid header {
+  grid-area: header;
+}
+.grid header .header-top {
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid header .header-top .header-nav .header-nav-ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+.grid header .header-top .header-nav .header-nav-ul li a {
+  font-family: "Rubik";
+  font-weight: 500;
+  color: #444444;
+  font-size: 15px;
+  transition: all 0.3s ease 0s;
+}
+.grid header .header-top .header-nav .header-nav-ul li a:hover {
+  display: inline-block;
+  color: #e14546;
+  transform: scale(1.1);
+}
+.grid header .header-top .header-track {
+  display: flex;
+  gap: 25px;
+}
+.grid header .header-top .header-track .track span {
+  font-family: "Rubik";
+  font-size: 14px;
+  color: #444444;
+  margin-left: 5px;
+}
+.grid header .header-bootom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40%;
+}
+.grid header .header-bootom .header-depart {
+  width: 16.6%;
+  height: 40px;
+  border: 2px solid #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.grid header .header-bootom .header-depart:hover {
+  border: 2px solid #3b3b3b;
+}
+.grid header .header-bootom .header-depart::after {
+  content: "All Departaments";
+  font-family: "Rubik";
+  font-weight: 500;
+  color: #444444;
+  font-size: 15px;
+}
+.grid header .header-bootom .header-depart p {
+  font-family: "Rubik";
+  font-weight: 500;
+  color: #444444;
+  font-size: 15px;
+}
+.grid header .header-bootom .header-form {
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+.grid header .header-bootom .header-form .search {
+  width: 60%;
+  height: 40px;
+  border-left: 2px solid #d1d1d1;
+  border-top: 2px solid #d1d1d1;
+  border-bottom: 2px solid #d1d1d1;
+  font-size: 15px;
+  color: #0c0c0c;
+  font-weight: 400;
+  font-family: "Rubik";
+  padding: 0px 20px;
+  border-radius: 4px 0px 0px 4px;
+}
+.grid header .header-bootom .header-form .categories {
+  height: 40px;
+  border-top: 2px solid #d1d1d1;
+  border-bottom: 2px solid #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid header .header-bootom .header-form .categories p {
+  color: #444444;
+  font-weight: 400;
+  font-family: "Rubik";
+  font-size: 15px;
+  padding: 0 15px;
+}
+.grid header .header-bootom .header-form .search-btn {
+  height: 40px;
+  width: 100px;
+  font-weight: 400;
+  font-family: "Rubik";
+  font-size: 15px;
+  border-radius: 0px 4px 4px 0px;
+  background-color: #0063d1;
+  color: #ffffff;
+  transition: all 0.3s ease 0s;
+}
+.grid header .header-bootom .header-form .search-btn:hover {
+  background-color: #004fa8;
+}
+.grid header .header-bootom .header-status {
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.grid header .header-bootom .header-status .repost, .grid header .header-bootom .header-status .like, .grid header .header-bootom .header-status .shopping {
+  display: flex;
+  align-items: center;
+}
+.grid header .header-bootom .header-status .repost span, .grid header .header-bootom .header-status .like span, .grid header .header-bootom .header-status .shopping span {
+  margin-left: 8px;
+  font-size: 13px;
+  color: #242424;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+.grid header .header-bootom .header-status .price-status .your-cart {
+  font-size: 13px;
+  color: #676767;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+.grid header .header-bootom .header-status .price-status .ico-valute {
+  display: inline;
+}
+.grid header .header-bootom .header-status .price-status .ico-valute .money-status {
+  display: inline-block;
+  font-size: 13px;
+  color: #242424;
+  font-weight: 600;
+  font-family: "Rubik";
+  margin: 5px 0 0 3px;
+}
+.grid .aside {
+  grid-area: aside;
+  display: none;
+}
+.grid .aside .all-depart-list {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d1d1d1;
+  border-radius: 4px;
+}
+.grid .aside .all-depart-list .list li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #d1d1d1;
+}
+.grid .aside .all-depart-list .list li a {
+  display: inline-block;
+  width: 90%;
+  margin: 0 10px 0 10px;
+  color: #242424;
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.3s ease 0s;
+  padding: 5px 0;
+}
+.grid .aside .all-depart-list .list li a:hover {
+  font-weight: 600;
+}
+.grid .main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.grid .main .item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background: #f10000;
+  min-height: 490px;
+}
+.grid .main .item-1 .swiper {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.grid .main .item-1 .swiper .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.grid .main .item-1 .swiper .swiper-wrapper .swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+.grid .main .item-1 .swiper .swiper-wrapper .swiper-slide .title {
+  max-width: 250px;
+  font-family: "Rubik";
+  font-size: 32px;
+  line-height: 46px;
+  color: #eeeeee;
+  font-weight: 500;
+}
+.grid .main .item-1 .swiper .swiper-wrapper .swiper-slide .subtitle {
+  font-size: 21px;
+  max-width: 250px;
+  color: #eeeeee;
+  font-weight: 300;
+  font-family: "Rubik";
+  margin: 20px 0 20px 0;
+}
+.grid .main .item-1 .swiper .swiper-wrapper .swiper-slide .text button {
+  font-family: "Rubik";
+  font-weight: 500;
+  width: 200px;
+  height: 55px;
+  border-radius: 4px;
+  border: 2px solid #0063d1;
+  background-color: #e7e7e7;
+  font-size: 15px;
+  color: #0063d1;
+  transition: all 0.3s ease 0s;
+}
+.grid .main .item-1 .swiper .swiper-wrapper .swiper-slide .text button:hover {
+  background-color: #0063d1;
+  color: #ffffff;
+}
+.grid .main .item-2, .grid .main .item-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background: url("https://loremflickr.com/480/320/night") top/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid .main .item-2 h2, .grid .main .item-3 h2 {
+  margin-left: 20px;
+  max-width: 70%;
+  font-size: 25px;
+  color: #fafafa;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .main .item-2 p, .grid .main .item-3 p {
+  margin: 20px 0 0 20px;
+  max-width: 70%;
+  font-size: 25px;
+  color: #fafafa;
+  font-weight: 300;
+  font-family: "Rubik";
+}
+.grid .main .item-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background: #0127ff;
+  background: url("https://loremflickr.com/480/320/football") top/cover no-repeat;
+}
+.grid .footer {
+  grid-area: footer;
+  margin-top: 50px;
+}
+.grid .footer .swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid .footer .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  -size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 1) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid .footer .swiper .swiper-wrapper .swiper-slide img {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.grid .footer .swiper .swiper-wrapper .swiper-slide img:hover {
+  filter: brightness(40%);
+}
+.grid .footer .swiper .swiper-wrapper .swiper-slide p {
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .swiper .swiper-wrapper .swiper-slide h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  font-size: 30px;
+  color: #dfdfdf;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .swiper .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: rotate(180deg) scale(0.7);
+  background: rgba(0, 0, 0, 0.5960784314);
+  color: #d1d1d1;
+  transition: all 0.3s ease 0s;
+}
+.grid .footer .swiper .swiper-button-prev:active {
+  transform: scale(0.6) rotate(180deg);
+}/*# sourceMappingURL=style.css.map */
