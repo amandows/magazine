@@ -132,15 +132,26 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
+.grid header .header-bootom .header-depart p {
+  font-family: "Rubik";
+  font-weight: 500;
+  color: #444444;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .grid header .header-bootom .header-depart:hover {
   border: 2px solid #3b3b3b;
 }
-.grid header .header-bootom .header-depart::after {
+.grid header .header-bootom .header-depart::before {
   content: "All Departaments";
   font-family: "Rubik";
   font-weight: 500;
   color: #444444;
   font-size: 15px;
+  margin-right: 15px;
 }
 .grid header .header-bootom .header-depart p {
   font-family: "Rubik";
@@ -366,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .grid .footer .swiper {
   width: 100%;
-  height: 100%;
+  height: 250px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -421,5 +432,317 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0s;
 }
 .grid .footer .swiper .swiper-button-prev:active {
+  transform: scale(0.6) rotate(180deg);
+}
+.grid .footer .sale-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid .footer .sale-container .sale-text {
+  font-size: 30px;
+  color: #090909;
+  font-weight: 500;
+  font-family: "Rubik";
+  text-align: center;
+  margin: 30px 0;
+}
+.grid .footer .sale-container .sale-btns {
+  margin: 0 auto;
+}
+.grid .footer .sale-container .sale-btns .sale-btn-1, .grid .footer .sale-container .sale-btns .sale-btn-2, .grid .footer .sale-container .sale-btns .sale-btn-3 {
+  width: 100px;
+  height: 45px;
+  font-size: 25px;
+  font-family: "Rubik";
+  background: rgba(0, 0, 0, 0);
+  border-bottom: solid 5px rgba(0, 98, 209, 0);
+}
+.grid .footer .sale-container .sale-btns .sale-btn-1:hover, .grid .footer .sale-container .sale-btns .sale-btn-2:hover, .grid .footer .sale-container .sale-btns .sale-btn-3:hover {
+  transform: scale(1.1);
+}
+.grid .footer .sale-container .sale-btns .sale-btn-1 {
+  border-bottom: solid 5px #0063d1;
+}
+.grid .footer .sale-container .content-1 {
+  margin-top: 30px;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale {
+  width: 100%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide {
+  text-align: center;
+  -size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide img {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide img:hover {
+  filter: brightness(40%);
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide p {
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide h3 {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  z-index: 5;
+  transform: translateX(-100%);
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Rubik";
+  background-color: #62ab00;
+  padding: 5px;
+  border-radius: 4px;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide .text {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide .text .price {
+  display: inline-block;
+  font-size: 16px;
+  color: #0063d1;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide .text .price .price-span {
+  font-size: 16px;
+  color: #393939;
+  font-weight: 400;
+  font-family: "Rubik";
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-wrapper .swiper-slide .text .description {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: rotate(180deg) scale(0.7);
+  background: rgba(0, 0, 0, 0.5960784314);
+  color: #d1d1d1;
+  transition: all 0.3s ease 0s;
+}
+.grid .footer .sale-container .content-1 .swaiper-sale .swiper-button-prev:active {
+  transform: scale(0.6) rotate(180deg);
+}
+.grid .footer .sale-container .content-2 {
+  margin-top: 30px;
+  display: none;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 {
+  width: 100%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide {
+  text-align: center;
+  -size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide img {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide img:hover {
+  filter: brightness(40%);
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide p {
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide h3 {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  z-index: 5;
+  transform: translateX(-100%);
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Rubik";
+  background-color: #62ab00;
+  padding: 5px;
+  border-radius: 4px;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide .text {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide .text .price {
+  display: inline-block;
+  font-size: 16px;
+  color: #0063d1;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide .text .price .price-span {
+  font-size: 16px;
+  color: #393939;
+  font-weight: 400;
+  font-family: "Rubik";
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-wrapper .swiper-slide .text .description {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: rotate(180deg) scale(0.7);
+  background: rgba(0, 0, 0, 0.5960784314);
+  color: #d1d1d1;
+  transition: all 0.3s ease 0s;
+}
+.grid .footer .sale-container .content-2 .swaiper-sale2 .swiper-button-prev:active {
+  transform: scale(0.6) rotate(180deg);
+}
+.grid .footer .sale-container .content-3 {
+  margin-top: 30px;
+  display: none;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 {
+  width: 100%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide {
+  text-align: center;
+  -size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide img {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide img:hover {
+  filter: brightness(40%);
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide p {
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide h3 {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  z-index: 5;
+  transform: translateX(-100%);
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Rubik";
+  background-color: #62ab00;
+  padding: 5px;
+  border-radius: 4px;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide .text {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide .text .price {
+  display: inline-block;
+  font-size: 16px;
+  color: #0063d1;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide .text .price .price-span {
+  font-size: 16px;
+  color: #393939;
+  font-weight: 400;
+  font-family: "Rubik";
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-wrapper .swiper-slide .text .description {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: rotate(180deg) scale(0.7);
+  background: rgba(0, 0, 0, 0.5960784314);
+  color: #d1d1d1;
+  transition: all 0.3s ease 0s;
+}
+.grid .footer .sale-container .content-3 .swaiper-sale3 .swiper-button-prev:active {
   transform: scale(0.6) rotate(180deg);
 }/*# sourceMappingURL=style.css.map */
