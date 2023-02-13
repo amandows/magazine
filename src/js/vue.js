@@ -160,3 +160,13 @@ btn3.addEventListener('click', () => {
     content2.style.cssText = "display: none;"
     content3.style.cssText = "display: block;"
 })
+
+var div = document.querySelector('.sale-container')
+
+div.addEventListener('click', function(event) {
+	var target = event.target;
+	let targetClass = target.className
+    if(targetClass == 12578) {
+        window.open("https://loremflickr.com/480/320/galaxy");
+    }
+});
