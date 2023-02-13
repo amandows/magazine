@@ -428,6 +428,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
                 font-family: "Rubik";
                 text-align: center;
                 margin: 30px 0;
+                &::after {
+                    content: 'Get our best prices';
+                    font-size: 30px;
+                    color: #090909dc;
+                    font-weight: 300ss;
+                    font-family: "Rubik";
+                    text-align: center;
+                }
             }
             .sale-btns {
                 margin: 0 auto;
