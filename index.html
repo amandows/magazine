@@ -20,6 +20,7 @@
             </div>
             <div class="logo">AGORA</div>
             <div class="statistics">
+                <button id="myBtn" class="sign-in">SIgn in</button>
                 <img src="./src/img/ico/person.svg" alt="" class="person">
                 <img src="./src/img/ico/like.png" alt="" class="likes">
                 <img src=".//src/img/ico/shop-stat.svg" alt="" class="shop-stat">
@@ -212,6 +213,19 @@
             </div>
         </div>
     </main>
+    <div id="myModal" class="modal">
+        <!-- Модальное содержание -->
+        <div class="modal-content">
+            <form class="sign-modal" action="" onsubmit="return signIn()">
+                <p class="title">Вход в аккаунт</p>
+                <input type="text" class="login" placeholder="Login...">
+                <input type="password" class="password" placeholder="Password">
+                <p class="error"></p>
+                <input type="submit" class="submit" value="Войти">
+            </form>
+            <span class="close">&times;</span>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./src/js/vue.js"></script>
 </body>

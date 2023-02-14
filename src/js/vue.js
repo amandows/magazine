@@ -38,7 +38,7 @@ menuBtn.addEventListener("click", () => {
 
 
 // Установка даты, до которой считать обратный отсчет
-var countDownDate = new Date("Mar 31, 2023 00:00:00").getTime();
+var countDownDate = new Date("Feb 28, 2023 00:00:00").getTime();
 
 // Обновление таймера каждую секунду
 var x = setInterval(function() {
@@ -62,3 +62,68 @@ var x = setInterval(function() {
 
   // Если обратный отсчет закончился, вывести сообщение
 }, 1000);
+
+
+
+
+// Получить модальный
+var modal = document.getElementById("myModal");
+
+// Получить кнопку, которая открывает модальный
+var btn = document.getElementById("myBtn");
+
+// Получить элемент <span>, который закрывает модальный
+var span = document.getElementsByClassName("close")[0];
+
+// Когда пользователь нажимает на кнопку, откройте модальный
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Когда пользователь нажимает на <span> (x), закройте модальное окно
+span.onclick = function() {
+    modal.style.display = "none";
+    error.textContent = "";
+}
+
+// Когда пользователь щелкает в любом месте за пределами модального, закройте его
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      error.textContent = "";
+    }
+}
+
+let logPass = {
+  aman: {
+    password: "1234",
+  }
+}
+
+let login = document.querySelector('.login')
+let password = document.querySelector('.password')
+let error = document.querySelector('.error')
+let submit = document.querySelector('.submit')
+
+function signIn() {
+  if(login.value == "" || password.value == "") {
+    error.textContent = "Логин или пароль не должен быть путым"
+    return false
+  }
+  if(Object.keys(logPass).includes(login.value) == true) {
+    if(logPass[login.value].password.includes(password.value) == true) {
+      alert("Вы вошли в аккаунт")
+      return true
+    } else {
+      error.textContent = "Пароль неверный"
+      return false
+    }
+  } else {
+    error.textContent = "Пользователь не сушествует"
+    return false
+  }
+}
+
+btn.addEventListener('click', () => {
+  alert("login: aman, password: 1234")
+})
