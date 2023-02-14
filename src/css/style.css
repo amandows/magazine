@@ -375,7 +375,7 @@ main .content-container .content-1 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 main .content-container .content-1 .item-1, main .content-container .content-1 .item-2, main .content-container .content-1 .item-3, main .content-container .content-1 .item-4 {
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -420,8 +420,8 @@ main .content-container .content-2 .sale-content .sale-text {
   width: 60%;
 }
 main .content-container .content-2 .sale-content .sale-text .title {
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 35px;
+  letter-spacing: 0px;
   text-transform: uppercase;
   color: #171717;
   font-weight: 500;
@@ -439,7 +439,7 @@ main .content-container .content-2 .sale-content .sale-text .description {
   margin: 2rem 0;
 }
 main .content-container .content-2 .sale-content .sale-text .price {
-  font-size: 20px;
+  font-size: 35px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #2a4aff;
@@ -448,7 +448,7 @@ main .content-container .content-2 .sale-content .sale-text .price {
   text-align: center;
 }
 main .content-container .content-2 .sale-content .sale-text .price .price-span {
-  font-size: 18px;
+  font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #515151;
@@ -469,6 +469,7 @@ main .content-container .content-2 .sale-content .sale-text .date {
   margin-top: 30px;
 }
 main .content-container .content-2 .sale-content .sale-text .date p {
+  width: 25%;
   margin-top: 5px;
   font-size: 25px;
   line-height: 15px;

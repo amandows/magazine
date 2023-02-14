@@ -355,7 +355,7 @@ main {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             .item-1, .item-2, .item-3, .item-4 {
-                height: 200px;
+                height: 300px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -398,8 +398,8 @@ main {
                 .sale-text {
                     width: 60%;
                     .title {
-                        font-size: 20px;
-                        letter-spacing: 2px;
+                        font-size: 35px;
+                        letter-spacing: 0px;
                         text-transform: uppercase;
                         color: #171717;
                         font-weight: 500;
@@ -417,7 +417,7 @@ main {
                         margin: 2rem 0;
                     }
                     .price {
-                        font-size: 20px;
+                        font-size: 35px;
                         letter-spacing: 2px;
                         text-transform: uppercase;
                         color: #2a4aff;
@@ -425,7 +425,7 @@ main {
                         font-family: "Rubik";
                         text-align: center;
                         .price-span {
-                            font-size: 18px;
+                            font-size: 25px;
                             letter-spacing: 2px;
                             text-transform: uppercase;
                             color: #515151;
@@ -446,6 +446,7 @@ main {
                         align-items: center;
                         margin-top: 30px;
                         p {
+                            width: 25%;
                             margin-top: 5px;
                             font-size: 25px;
                             line-height: 15px;
