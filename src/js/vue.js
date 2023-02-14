@@ -32,3 +32,33 @@ menuBtn.addEventListener("click", () => {
         menuBtn.style.cssText = "transform: rotate(90deg)"
     }
 })
+
+
+
+
+
+// Установка даты, до которой считать обратный отсчет
+var countDownDate = new Date("Mar 31, 2023 00:00:00").getTime();
+
+// Обновление таймера каждую секунду
+var x = setInterval(function() {
+
+  // Получение текущей даты и времени
+    var now = new Date().getTime();
+  // Вычисление времени, оставшегося до даты обратного отсчета
+    var distance = countDownDate - now;
+
+  // Вычисление дней, часов, минут и секунд
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Отображение времени на странице
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+  // Если обратный отсчет закончился, вывести сообщение
+}, 1000);

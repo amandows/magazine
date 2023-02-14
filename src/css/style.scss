@@ -350,6 +350,7 @@ main {
     .content-container {
         width: 80%;
         margin: 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         .content-1 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -364,7 +365,7 @@ main {
                     height: 50px;
                 }
                 .text {
-                    width: 80%;
+                    width: 70%;
                     margin: 0 auto;
                     h3 {
                         font-size: 18px;
@@ -377,11 +378,118 @@ main {
                     p {
                         font-size: 14px;
                         text-transform: uppercase;
-                        color: #111111;
+                        color: #434343;
                         font-family: "Oswald";
                         text-align: center;
                         line-height: 20px;
                     }
+                }
+            }
+        }
+        .content-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(400px, auto);
+            .sale-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .sale-text {
+                    width: 60%;
+                    .title {
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        color: #171717;
+                        font-weight: 500;
+                        font-family: "Poppins";
+                        text-align: center;
+                    }
+                    .description {
+                        font-size: 16px;
+                        letter-spacing: 0px;
+                        color: #505050;
+                        font-weight: 500;
+                        font-family: "Poppins";
+                        text-align: center;
+                        line-height: 2rem;
+                        margin: 2rem 0;
+                    }
+                    .price {
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        color: #2a4aff;
+                        font-weight: 800;
+                        font-family: "Rubik";
+                        text-align: center;
+                        .price-span {
+                            font-size: 18px;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            color: #515151;
+                            font-weight: 800;
+                            font-family: "Rubik";
+                            text-align: center;
+                            text-decoration: line-through;
+                            margin-left: 20px;
+                        }
+                    }
+                    .date {
+                        width: 50%;
+                        height: 40px;
+                        margin: 0 auto;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin-top: 30px;
+                        p {
+                            margin-top: 5px;
+                            font-size: 25px;
+                            line-height: 15px;
+                            text-transform: uppercase;
+                            color: #111111;
+                            font-weight: 500;
+                            font-family: "Poppins";
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .day::after {
+                            content: 'day';
+                            font-size: 10px;
+                            margin-top: 2px;
+                        }
+                        .hours::after {
+                            content: 'hours';
+                            font-size: 10px;
+                            margin-top: 2px;
+                        }
+                        .min::after {
+                            content: 'min';
+                            font-size: 10px;
+                            margin-top: 2px;
+                        }
+                        .sec::after {
+                            content: 'sec';
+                            font-size: 10px;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+            .sale-img {
+                flex: 0 0 33.333%;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
             }
         }
