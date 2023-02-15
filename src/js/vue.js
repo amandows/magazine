@@ -153,13 +153,21 @@ likeBtn.addEventListener('click', () => {
 
 
 let btnx = document.querySelector('.more-products-btn');
-let content = document.querySelector('.products');
+let productWiev1 = document.querySelectorAll('.product-wiev-1');
+let productWiev2 = document.querySelectorAll('.product-wiev-2');
 let two = 0
 btnx.addEventListener('click', () => {
   two++
-  const contentCopy = content.cloneNode(true);
-  content.parentNode.insertBefore(contentCopy, content.nextSibling);
-  if(two == 3) {
-    btnx.style.cssText = "display: none;";
+  console.log(two)
+  if(two == 1) {
+    productWiev1.forEach(function(product) {
+      product.style.display = 'block';
+    });
+  }
+  if(two == 2) {
+    productWiev2.forEach(function(products) {
+      products.style.display = 'block';
+      btnx.style.cssText = "display: none;";
+    });
   }
 });
