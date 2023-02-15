@@ -533,6 +533,194 @@ main .content-container .content-2 .sale-img img {
   top: 0;
   left: 0;
 }
+main .content-container .content-3 {
+  width: 100%;
+  display: flex;
+  padding: 50px 0;
+}
+main .content-container .content-3 .popular-products, main .content-container .content-3 .newest-products, main .content-container .content-3 .discounted-products {
+  width: 33.33%;
+  height: 70px;
+  color: #888888;
+  font-family: "Poppins";
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease 0s;
+}
+main .content-container .content-3 .popular-products:hover, main .content-container .content-3 .newest-products:hover, main .content-container .content-3 .discounted-products:hover {
+  background-color: rgb(197, 197, 197);
+  color: #f7f7f7;
+}
+main .content-container .content-3 .popular-products {
+  background-color: #2a4aff;
+  color: #f7f7f7;
+}
+main .content-container .content-4 {
+  width: 100%;
+}
+main .content-container .content-4 .products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: 15px;
+}
+main .content-container .content-4 .products .product {
+  flex: 0 0 33.333%;
+  position: relative;
+  height: 380px;
+}
+main .content-container .content-4 .products .product img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .content-container .content-4 .products .product .description {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 100%;
+  z-index: 5;
+  transform: translateY(-100%);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main .content-container .content-4 .products .product .description .title {
+  margin-left: 10px;
+  font-size: 17px;
+  color: #111111;
+  font-family: "Oswald";
+}
+main .content-container .content-4 .products .product .description .price {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #2344e8;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+main .content-container .content-4 .products .product .product-hover {
+  width: 100%;
+  height: 100%;
+  background: #2344e8;
+  position: relative;
+  z-index: 4;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+main .content-container .content-4 .products .product .product-hover:hover {
+  opacity: 95%;
+}
+main .content-container .content-4 .products .product .product-hover .brand {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Poppins";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+main .content-container .content-4 .products .product .product-hover .sale-info {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translateX(-100%);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Poppins";
+  padding: 5px 10px;
+  background: #000;
+}
+main .content-container .content-4 .products .product .product-hover .buy-product {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-100%);
+  width: 130px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  font-family: "Poppins";
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #111111;
+  transition: all 0.3s ease 0s;
+}
+main .content-container .content-4 .products .product .product-hover .buy-product:hover {
+  background-color: #e4e4e4;
+}
+main .content-container .content-4 .products .product .product-hover .buy-product:active {
+  top: 50%;
+  left: 10%;
+  transform: translateY(-100%) scale(0.9);
+}
+main .content-container .content-4 .products .product .product-hover .view-images {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateY(-100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("../img/ico/view.png") center/cover no-repeat;
+  background-size: 15px 15px;
+  background-color: rgba(255, 255, 255, 0.242);
+  transition: all 0.3s ease 0s;
+}
+main .content-container .content-4 .products .product .product-hover .view-images:hover {
+  background-color: rgba(233, 230, 230, 0.4392156863);
+}
+main .content-container .content-4 .products .product .product-hover .view-images:active {
+  top: 50%;
+  left: 60%;
+  transform: translateY(-100%) scale(0.9);
+}
+main .content-container .content-4 .products .product .product-hover .like {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translateY(-100%) translateX(-100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("../img/ico/like.png") center/cover no-repeat;
+  background-size: 15px 15px;
+  background-color: rgba(255, 255, 255, 0.242);
+  transition: all 0.3s ease 0s;
+}
+main .content-container .content-4 .products .product .product-hover .like:hover {
+  background-color: #ff0101;
+}
+main .content-container .content-4 .products .product .product-hover .like:active {
+  top: 50%;
+  left: 90%;
+  transform: translateY(-100%) translateX(-100%) scale(0.9);
+}
+main .content-container .content-4 .more-products {
+  width: 100%;
+}
+main .content-container .content-4 .more-products .more-products-btn {
+  width: 100%;
+  height: 50px;
+  font-family: "Poppins";
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #111111;
+}
 
 .modal {
   display: none; /* Скрыто по умолчанию */
@@ -619,4 +807,9 @@ main .content-container .content-2 .sale-img img {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
 }/*# sourceMappingURL=style.css.map */

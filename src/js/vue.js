@@ -100,6 +100,8 @@ let logPass = {
   }
 }
 
+
+// validation function modal window -----------------//
 let login = document.querySelector('.login')
 let password = document.querySelector('.password')
 let error = document.querySelector('.error')
@@ -127,3 +129,37 @@ function signIn() {
 btn.addEventListener('click', () => {
   alert("login: aman, password: 1234")
 })
+
+
+
+
+
+
+let likeBtn = document.querySelector('.like');
+let three = 0;
+
+likeBtn.addEventListener('click', () => {
+  three++
+  console.log(three);
+  if(three % 2 == 0) {
+    likeBtn.style.cssText = "background-color: rgba(255, 255, 255, 0.242);";
+  }
+  else if(three % 2 !== 0) {
+    likeBtn.style.cssText = "background-color: #ff0101;";
+}
+})
+
+
+
+
+let btnx = document.querySelector('.more-products-btn');
+let content = document.querySelector('.products');
+let two = 0
+btnx.addEventListener('click', () => {
+  two++
+  const contentCopy = content.cloneNode(true);
+  content.parentNode.insertBefore(contentCopy, content.nextSibling);
+  if(two == 3) {
+    btnx.style.cssText = "display: none;";
+  }
+});
