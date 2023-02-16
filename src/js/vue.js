@@ -239,9 +239,9 @@ fetch(url)
     let randomNumber1 = Math.floor(Math.random() * 11) + 10;
     let randomNumber2 = Math.floor(Math.random() * 11) + 20;
       // Извлекаем первую статью
-    var article = articles[randomNumber];
-    var article1 = articles[randomNumber1];
-    var article2 = articles[randomNumber2];
+    var article = articles[0];
+    var article1 = articles[1];
+    var article2 = articles[2];
 
       // Создаем элементы для заголовка, изображения и описания новости
     var title = document.createElement('h2');
