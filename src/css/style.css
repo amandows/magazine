@@ -576,20 +576,6 @@ main .content-container .content-4 .products {
 main .content-container .content-4 .products-1 {
   display: none;
 }
-@-webkit-keyframes newproducts {
-  0% {
-    color: #ffffff;
-  }
-  25% {
-    color: #eeff00;
-  }
-  50% {
-    color: hsl(298deg, 100%, 74%);
-  }
-  100% {
-    color: #1ffff8;
-  }
-}
 @keyframes newproducts {
   0% {
     color: #ffffff;
@@ -628,12 +614,9 @@ main .content-container .content-4 .products-1 .product::before {
   font-family: "Rubik";
   font-size: 16px;
   z-index: 6;
-  -webkit-animation-name: newproducts;
-          animation-name: newproducts;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: newproducts;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 main .content-container .content-4 .products-2 {
   display: none;
@@ -1079,10 +1062,10 @@ footer .footer-line .logo p, footer .footer-line .logo .data {
   font-weight: 300;
   font-family: "Poppins";
 }
-footer .footer-line .help, footer .footer-line .about-us {
+footer .footer-line .help, footer .footer-line .abosut-us {
   margin-top: 25px;
 }
-footer .footer-line .help p, footer .footer-line .about-us p {
+footer .footer-line .help p, footer .footer-line .abosut-us p {
   font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1090,13 +1073,13 @@ footer .footer-line .help p, footer .footer-line .about-us p {
   font-weight: 700;
   font-family: "Montserrat";
 }
-footer .footer-line .help ul, footer .footer-line .about-us ul {
+footer .footer-line .help ul, footer .footer-line .abosut-us ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: 30px;
 }
-footer .footer-line .help ul li a, footer .footer-line .about-us ul li a {
+footer .footer-line .help ul li a, footer .footer-line .abosut-us ul li a {
   display: inline-block;
   font-size: 14px;
   color: #c9c9c9;
@@ -1104,7 +1087,7 @@ footer .footer-line .help ul li a, footer .footer-line .about-us ul li a {
   font-family: "Poppins";
   transition: all 0.3s ease 0s;
 }
-footer .footer-line .help ul li a:hover, footer .footer-line .about-us ul li a:hover {
+footer .footer-line .help ul li a:hover, footer .footer-line .abosut-us ul li a:hover {
   color: #ffffff;
   transform: translateX(10px);
 }
