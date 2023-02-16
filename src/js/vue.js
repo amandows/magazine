@@ -226,15 +226,18 @@ var query = 'Технология'; // Задайте свой запрос дл
 var apiKey = '11d6fbfa57be48988ea03d6a7fcced35'; // Ваш ключ API
 
   // Формируем URL запроса к API Google News
-var url = 'https://newsapi.org/v2/top-headlines?country=ru&apiKey=11d6fbfa57be48988ea03d6a7fcced35';
+var url = 'https://newsapi.org/v2/everything?q=' + encodeURIComponent(query) + '&apiKey=' + apiKey;
 
+
+var query = 'Apple'; // Задайте свой запрос для новостей
+var apiKey = '11d6fbfa57be48988ea03d6a7fcced35'; // Ваш ключ API
   // Запрашиваем новости у API Google News
 fetch(url)
   .then(response => response.json())
   .then(data => {
       // Извлекаем список статей из ответа
     var articles = data.articles;
-
+    console.log(articles.length)
     let randomNumber = Math.floor(Math.random() * 7);
     let randomNumber1 = Math.floor(Math.random() * 7) + 7;
     let randomNumber2 = Math.floor(Math.random() * 14) + 6;
