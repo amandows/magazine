@@ -226,7 +226,7 @@ var query = 'Технология'; // Задайте свой запрос дл
 var apiKey = '11d6fbfa57be48988ea03d6a7fcced35'; // Ваш ключ API
 
   // Формируем URL запроса к API Google News
-var url = 'https://newsapi.org/v2/everything?q=' + encodeURIComponent(query) + '&apiKey=' + apiKey;
+var url = 'https://newsapi.org/v2/top-headlines?country=ru&apiKey=11d6fbfa57be48988ea03d6a7fcced35';
 
   // Запрашиваем новости у API Google News
 fetch(url)
@@ -235,13 +235,13 @@ fetch(url)
       // Извлекаем список статей из ответа
     var articles = data.articles;
 
-    let randomNumber = Math.floor(Math.random() * 11) + 1;
-    let randomNumber1 = Math.floor(Math.random() * 11) + 10;
-    let randomNumber2 = Math.floor(Math.random() * 11) + 20;
+    let randomNumber = Math.floor(Math.random() * 7);
+    let randomNumber1 = Math.floor(Math.random() * 7) + 7;
+    let randomNumber2 = Math.floor(Math.random() * 14) + 6;
       // Извлекаем первую статью
-    var article = articles[0];
-    var article1 = articles[1];
-    var article2 = articles[2];
+    var article = articles[randomNumber];
+    var article1 = articles[randomNumber1];
+    var article2 = articles[randomNumber2];
 
       // Создаем элементы для заголовка, изображения и описания новости
     var title = document.createElement('h2');
