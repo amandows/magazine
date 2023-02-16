@@ -237,10 +237,10 @@ fetch(url)
   .then(data => {
       // Извлекаем список статей из ответа
     var articles = data.articles;
-    console.log(articles.length)
-    let randomNumber = Math.floor(Math.random() * 7);
-    let randomNumber1 = Math.floor(Math.random() * 7) + 7;
-    let randomNumber2 = Math.floor(Math.random() * 14) + 6;
+    let newsArr = articles.length
+    let randomNumber = Math.floor(Math.random() * newsArr);
+    let randomNumber1 = Math.floor(Math.random() * newsArr);
+    let randomNumber2 = Math.floor(Math.random() * newsArr);
       // Извлекаем первую статью
     var article = articles[randomNumber];
     var article1 = articles[randomNumber1];
