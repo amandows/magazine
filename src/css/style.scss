@@ -523,11 +523,11 @@ main {
         .content-3 {
             width: 100%;
             display: flex;
-            padding: 50px 0;
+            margin: 30px 0;
             .popular-products, .newest-products, .discounted-products {
                 width: 33.33%;
                 height: 70px;
-                color: #888888;
+                color: #222222;
                 font-family: "Poppins";
                 font-size: 16px;
                 text-transform: uppercase;
@@ -537,7 +537,7 @@ main {
                 transition: all 0.3s ease 0s;
                 &:hover {
                     background-color: rgb(197, 197, 197);
-                    color: #f7f7f7;
+                    color: #0037ff;
                 }
             }
             .popular-products {
@@ -548,8 +548,57 @@ main {
         .content-4 {
             width: 100%;
             .products {
-                width: 100%;
                 display: grid;
+            }
+            .products-1 {
+                display: none;
+                @keyframes newproducts {
+                    0%   {color: #ffffff;}
+                    25%   {color: #eeff00;}
+                    50%  {color: hsl(298, 100%, 74%);}
+                    100% {color: #1ffff8;}
+                  }
+                .product::after {
+                    content: "";
+                    width: 60px;
+                    height: 25px;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    z-index: 5;
+                    transform: translateX(-100%);
+                    background-color: rgb(4, 208, 18);
+                    font-family: "Rubik";
+                    font-size: 16px;
+                    border-radius: 0 0 0 8px;
+                }
+                .product::before {
+                    content: "NEW";
+                    position: absolute;
+                    top: 1.5%;
+                    left: 100%;
+                    transform: translateX(-135%);
+                    background-color: rgb(4, 208, 18);
+                    font-family: "Rubik";
+                    font-size: 16px;
+                    z-index: 6;
+                    animation-name: newproducts;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                }
+            }
+            .products-2 {
+                display: none;
+                .product {
+                    filter: grayscale(100%);
+                }
+                .product-hover {
+                    display: none;
+                }
+            }
+            .products, .products-1, .products-2 {
+                overflow: hidden;
+                width: 100%;
                 grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
                 gap: 15px;
                 .product {
@@ -652,7 +701,7 @@ main {
                         .view-images {
                             position: absolute;
                             top: 50%;
-                            left: 60%;
+                            left: 55%;
                             transform: translateY(-100%);
                             width: 50px;
                             height: 50px;
@@ -666,7 +715,7 @@ main {
                             }
                             &:active {
                                 top: 50%;
-                                left: 60%;
+                                left: 55%;
                                 transform: translateY(-100%) scale(0.9);
                             }
                         }
@@ -710,6 +759,110 @@ main {
                     font-weight: 500;
                     font-size: 14px;
                     color: #111111;
+                }
+            }
+        }
+        .content-5 {
+            width: 100%;
+            margin: 30px 0;
+            .gallery {
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+                .item-1, .item-2, .item-3, .item-4 {
+                    min-height: 350px;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 5;
+                    }
+                    .title {
+                        position: absolute;
+                        z-index: 6;
+                        font-family: "Oswald";
+                        font-size: 25px;
+                        color: #ffffff;
+                        font-weight: 400;
+                    }
+                    .more-info {
+                        position: absolute;
+                        z-index: 6;
+                        width: 160px;
+                        height: 50px;
+                        border-radius: 25px;
+                        font-size: 14px;
+                        color: #ffffff;
+                        font-weight: 500;
+                        font-family: "Poppins";
+                        text-align: center;
+                        background-color: rgba(255, 255, 255, 0.101);
+                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.231);
+                        transition: all 0.3s ease 0s;
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.327);
+                        }
+                    }
+                }
+                .item-1 {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                    .title {
+                        top: 30%;
+                        left: 8%;
+                    }
+                    .more-info {
+                        top: 60%;
+                        left: 8%;
+                    }
+                }
+                .item-2 {
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    background-color: rgb(84, 84, 84);
+                    .title {
+                        top: 65%;
+                        left: 16%;
+                    }
+                    .more-info {
+                        top: 80%;
+                        left: 16%;
+                    }
+                }
+                .item-3 {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    .title {
+                        top: 30%;
+                        left: 16%;
+                    }
+                    .more-info {
+                        top: 60%;
+                        left: 16%;
+                    }
+                }
+                .item-4 {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    .title {
+                        top: 30%;
+                        left: 16%;
+                    }
+                    .more-info {
+                        top: 60%;
+                        left: 16%;
+                    }
                 }
             }
         }

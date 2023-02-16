@@ -171,3 +171,38 @@ btnx.addEventListener('click', () => {
     });
   }
 });
+
+
+let popularProductsBtn = document.querySelector('.popular-products');
+let newestProductsBtn = document.querySelector('.newest-products');
+let discountedProductsBtn = document.querySelector('.discounted-products');
+let products = document.querySelector('.products');
+let products1 = document.querySelector('.products-1');
+let products2 = document.querySelector('.products-2');
+
+popularProductsBtn.addEventListener('click', () => {
+  products.style.cssText = "display: grid;"
+  products1.style.cssText = "display: none;"
+  products2.style.cssText = "display: none;"
+  popularProductsBtn.style.cssText = "background-color: #2a4aff; color: #f7f7f7;"
+  newestProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"
+  discountedProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"  
+})
+
+newestProductsBtn.addEventListener('click', () => {
+  products.style.cssText = "display: none;"
+  products1.style.cssText = "display: grid;"
+  products2.style.cssText = "display: none;"
+  popularProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"
+  newestProductsBtn.style.cssText = "background-color: #2a4aff; color: #f7f7f7;"
+  discountedProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"  
+})
+
+discountedProductsBtn.addEventListener('click', () => {
+  products.style.cssText = "display: none;"
+  products1.style.cssText = "display: none;"
+  products2.style.cssText = "display: grid;"
+  popularProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"
+  newestProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"
+  discountedProductsBtn.style.cssText = "background-color: #2a4aff; color: #f7f7f7;"  
+})
