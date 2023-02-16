@@ -494,6 +494,7 @@ main .content-container .content-2 .sale-content .sale-text .date {
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
+  padding: 30px 30px;
 }
 main .content-container .content-2 .sale-content .sale-text .date p {
   width: 25%;
@@ -809,6 +810,10 @@ main .content-container .content-4 .more-products .more-products-btn {
   font-size: 14px;
   color: #111111;
 }
+main .content-container .content-4 .more-products .more-products-btn:hover {
+  background-color: rgb(95, 95, 95);
+  color: #e3e3e3;
+}
 main .content-container .content-5 {
   width: 100%;
   margin: 30px 0;
@@ -913,6 +918,204 @@ main .content-container .content-5 .gallery .item-4 .title {
 main .content-container .content-5 .gallery .item-4 .more-info {
   top: 60%;
   left: 16%;
+}
+main .content-container .news-wrapper {
+  width: 100%;
+  height: 60px;
+  background: rgb(39, 39, 39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 15px 0;
+}
+main .content-container .news-wrapper p {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+main .content-container .news-wrapper p::after {
+  content: " НОВОСТИ";
+  color: #1ffff8;
+}
+main .content-container .news {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+main .content-container .news .news-1, main .content-container .news .news-2, main .content-container .news .news-3 {
+  width: 33.333%;
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 30%;
+  align-items: flex-start;
+  overflow: hidden;
+}
+main .content-container .news .news-1 img, main .content-container .news .news-2 img, main .content-container .news .news-3 img {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .content-container .news .news-1 h2, main .content-container .news .news-2 h2, main .content-container .news .news-3 h2 {
+  display: none;
+}
+main .content-container .news .news-1 p, main .content-container .news .news-2 p, main .content-container .news .news-3 p {
+  position: absolute;
+  width: 95%;
+  top: 55%;
+  left: 1%;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+
+.subscribe {
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscribe .title {
+  font-weight: 400;
+  font-family: "Oswald";
+  color: #111111;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.subscribe .description {
+  max-width: 500px;
+  font-weight: 400;
+  font-family: "Oswald";
+  color: #111111;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  margin: 30px 0;
+}
+.subscribe .subscribe-form {
+  width: 500px;
+  height: 50px;
+  position: relative;
+  z-index: 5;
+}
+.subscribe .subscribe-form .subscribe-input {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.62);
+  border-radius: 10px;
+  font-weight: 400;
+  font-family: "Montserrat";
+  color: #111111;
+  font-size: 18px;
+  padding: 0 20px;
+}
+.subscribe .subscribe-form .subscribe-submit {
+  position: absolute;
+  background: url("../img/ico/subscribe.png") center/cover no-repeat;
+  width: 30px;
+  height: 21.66px;
+  z-index: 10;
+  top: 50%;
+  left: 100%;
+  transform: translate(-150%, -50%);
+  cursor: pointer;
+  transition: all 0.1s ease 0s;
+}
+.subscribe .subscribe-form .subscribe-submit:hover {
+  transform: translate(-150%, -50%) scale(1.1);
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: rgb(17, 17, 17);
+}
+footer .footer-line {
+  width: 80%;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .footer-line .logo {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer-line .logo .guides {
+  display: flex;
+  gap: 15px;
+}
+footer .footer-line .logo h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fffefe;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+footer .footer-line .logo p, footer .footer-line .logo .data {
+  font-size: 14px;
+  color: #c9c9c9;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+footer .footer-line .help, footer .footer-line .about-us {
+  margin-top: 25px;
+}
+footer .footer-line .help p, footer .footer-line .about-us p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fffefe;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+footer .footer-line .help ul, footer .footer-line .about-us ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+footer .footer-line .help ul li a, footer .footer-line .about-us ul li a {
+  display: inline-block;
+  font-size: 14px;
+  color: #c9c9c9;
+  font-weight: 300;
+  font-family: "Poppins";
+  transition: all 0.3s ease 0s;
+}
+footer .footer-line .help ul li a:hover, footer .footer-line .about-us ul li a:hover {
+  color: #ffffff;
+  transform: translateX(10px);
+}
+footer .footer-line .soccial-media {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+footer .footer-line .soccial-media img {
+  width: 20px;
+  height: 18px;
 }
 
 .modal {

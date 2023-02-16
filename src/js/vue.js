@@ -206,3 +206,77 @@ discountedProductsBtn.addEventListener('click', () => {
   newestProductsBtn.style.cssText = "background-color: #f7f7f7; color: #222222;"
   discountedProductsBtn.style.cssText = "background-color: #2a4aff; color: #f7f7f7;"  
 })
+
+
+
+
+
+
+
+
+
+
+// Получаем элементы с классами "news-1", "news-2", "news-3"
+var newsItems = document.querySelector('.news-1');
+var newsItems1 = document.querySelector('.news-2');
+var newsItems2 = document.querySelector('.news-3');
+
+  // Определяем параметры запроса для новостей
+var query = 'Технология'; // Задайте свой запрос для новостей
+var apiKey = '11d6fbfa57be48988ea03d6a7fcced35'; // Ваш ключ API
+
+  // Формируем URL запроса к API Google News
+var url = 'https://newsapi.org/v2/everything?q=' + encodeURIComponent(query) + '&apiKey=' + apiKey;
+
+  // Запрашиваем новости у API Google News
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+      // Извлекаем список статей из ответа
+    var articles = data.articles;
+
+    let randomNumber = Math.floor(Math.random() * 11);
+    let randomNumber1 = Math.floor(Math.random() * 11) + 10;
+    let randomNumber2 = Math.floor(Math.random() * 11) + 20;
+    console.log(randomNumber)
+    console.log(randomNumber1)
+    console.log(randomNumber2)
+      // Извлекаем первую статью
+    var article = articles[randomNumber];
+    var article1 = articles[randomNumber1];
+    var article2 = articles[randomNumber2];
+
+      // Создаем элементы для заголовка, изображения и описания новости
+    var title = document.createElement('h2');
+    var title1 = document.createElement('h2');
+    var title2 = document.createElement('h2');
+    var image = document.createElement('img');
+    var image1 = document.createElement('img');
+    var image2 = document.createElement('img');
+    var description = document.createElement('p');
+    var description1 = document.createElement('p');
+    var description2 = document.createElement('p');
+
+      // Задаем значения атрибутов и содержимое элементов
+    title.textContent = article.title;
+    title1.textContent = article1.title;
+    title2.textContent = article2.title;
+    image.src = article.urlToImage;
+    image1.src = article1.urlToImage;
+    image2.src = article2.urlToImage;
+    description.textContent = article.description;
+    description1.textContent = article1.description;
+    description2.textContent = article2.description;
+
+      // Добавляем элементы в текущий элемент
+    newsItems.appendChild(title);
+    newsItems.appendChild(image);
+    newsItems.appendChild(description);
+    newsItems1.appendChild(title1);
+    newsItems1.appendChild(image1);
+    newsItems1.appendChild(description1);
+    newsItems2.appendChild(title2);
+    newsItems2.appendChild(image2);
+    newsItems2.appendChild(description2);
+    });
+
