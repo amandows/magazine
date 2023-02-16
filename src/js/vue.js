@@ -235,12 +235,9 @@ fetch(url)
       // Извлекаем список статей из ответа
     var articles = data.articles;
 
-    let randomNumber = Math.floor(Math.random() * 11);
+    let randomNumber = Math.floor(Math.random() * 11) + 1;
     let randomNumber1 = Math.floor(Math.random() * 11) + 10;
     let randomNumber2 = Math.floor(Math.random() * 11) + 20;
-    console.log(randomNumber)
-    console.log(randomNumber1)
-    console.log(randomNumber2)
       // Извлекаем первую статью
     var article = articles[randomNumber];
     var article1 = articles[randomNumber1];
